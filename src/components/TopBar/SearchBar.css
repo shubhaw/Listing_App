@@ -19,14 +19,22 @@
   background: #ccc;
 }
 .product_input {
-    width: 50%;
-    height: 30px;
+    width: 100%;
+    padding: 10px;
     font-family: Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 12px;
     border: 1px solid #aaa;
     border-radius: 4px;
-    margin: 5px;
+}
+
+@media (min-width: 600px) {
+    .product_input {
+        width: 80%;
+    }
+}
+@media (min-width: 768px) {
+    .product_input {
+        width: 60%;
+    }
 }
 
 .react-autosuggest__container {

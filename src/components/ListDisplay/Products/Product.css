@@ -7,6 +7,7 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: white;
+    border-radius: 4px;
 }
 
 .product_details {

@@ -15,7 +15,7 @@ export class ListDisplay extends Component {
     });
   };
 
-  //Update implement
+  // TODO: Update implement
   editHandler = (id, e) => {
 
   }
@@ -23,6 +23,7 @@ export class ListDisplay extends Component {
   render() {
     return (
       <div className="list_container">
+        {this.props.list.length === 0 && "No Products!"}
         {this.props.list.map((ele) => (
           <Product
             key={ele['id']}

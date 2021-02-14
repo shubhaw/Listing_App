@@ -1,7 +1,7 @@
 const initialstate = {
-    list : [],
-    searchValue : "",
-    currentPage : 1,
+    list: [],
+    searchValue: "",
+    currentPage: 1,
 }
 
 
@@ -17,7 +17,7 @@ const reducer = (state = initialstate, action) => {
             }
         case 'UPDATE_CURRENT_PAGE':
             {
-                const updatedCurrentPage = action.updatetype === 'increament' ? state.currentPage + 1 : state.currentPage - 1 
+                const updatedCurrentPage = action.updatetype === 'increament' ? state.currentPage + 1 : state.currentPage - 1
 
                 return {
                     ...state,
@@ -34,7 +34,7 @@ const reducer = (state = initialstate, action) => {
                 }
             }
 
-        
+
         default: return state;
     }
 

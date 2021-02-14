@@ -42,3 +42,11 @@
     background-color: white;
 }
 
+.pageNumber {
+    padding: 5px;
+}
+
+.selectedPageNumber {
+    font-weight: bold;
+    text-decoration: underline;
+}
