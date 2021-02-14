@@ -16,8 +16,9 @@ export class Layout extends Component {
   }
 
 
-  //On removing search data, no automatic list render - check condition if prevProp list is different then prop.list
-  componentDidUpdate() {
+  //check condition if prevProp list is different then prop.list
+  componentDidUpdate(prevProps) {
+    
     if(this.props.searchValue === ""){
       axios
       .get(`http://localhost:3000/product_listings?_page=${this.props.currentPage}`)
@@ -25,7 +26,7 @@ export class Layout extends Component {
         this.props.updateList(res.data)
       });
     }
-    else {
+    else if(this.props.searchValue !== prevProps.searchValue){
       axios
         .get(`http://localhost:3000/product_listings?q=${this.props.searchValue}`)
         .then((res) => {
@@ -36,7 +37,7 @@ export class Layout extends Component {
     
   }
 
-  //debounce this function
+  //debounce this function or add serach icon button
   onChange = (value) => {
     this.props.updateSearchValue(value)
   }
@@ -69,6 +70,9 @@ export class Layout extends Component {
             <div className="nav_buttons">
               {prevButtons}
               {this.props.currentPage}
+              {/* {pages.map(pNo => {
+                this.props.currentPage === pN ? <b>pNO</b> : <span>pNo</span>
+              })} */}
               {nextButtons}
             </div>
           </div>

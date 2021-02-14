@@ -15,8 +15,9 @@ export class ListDisplay extends Component {
     });
   };
 
+  //Update implement
   editHandler = (id, e) => {
-      
+
   }
 
   render() {

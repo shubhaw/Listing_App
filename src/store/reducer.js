@@ -27,7 +27,7 @@ const reducer = (state = initialstate, action) => {
 
         case 'UPDATE_SEARCH_VALUE':
             {
-                const updatedSearchValue = action.searchVal.length ? action.searchVal : null
+                const updatedSearchValue = action.searchVal.length ? action.searchVal : ""
                 return {
                     ...state,
                     searchValue: updatedSearchValue

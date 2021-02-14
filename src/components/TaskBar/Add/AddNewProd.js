@@ -4,6 +4,8 @@ import axios from 'axios';
 import {useRef} from 'react';
 import {connect} from 'react-redux';
 
+
+//TODO - Title not coming, check vendor getting set. Prod id taken 2 when on page 2 and adding new prod.
 const AddNewProd = (props) => {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);

@@ -6,10 +6,7 @@ import del from './../../../delete.png';
 
 const Product = (props) => {
  
-    //Update Functionality to be implemented
-  function editHandler() {
 
-  }
   return (
     <div className="product_container">
       <div>
