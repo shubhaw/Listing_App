@@ -1,17 +1,15 @@
 import React from 'react';
 import './taskbar.css';
-import { Route, NavLink } from 'react-router-dom';
-import AddNewProd from './Add/AddNewProd';
+import { NavLink } from 'react-router-dom';
 
-const Taskbar = (props) => {
+const Taskbar = () => {
     return (
-        <div>
+        <div className="taskbar">
             <NavLink to="/addnewprod">
                 <button type="button" className="taskbar_button">
                     + Add New Product
-        </button>
+                </button>
             </NavLink>
-            <Route path="/addnewprod" exact component={AddNewProd} />
         </div>
     );
 };

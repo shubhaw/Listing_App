@@ -1,0 +1,26 @@
+.pagination {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination button{
+    border-radius: 4px;
+    border: 1px solid gray;
+    margin: 0 5px;
+
+}
+
+/* .page_info{
+    left: 10px;
+} */
+
+
+.pageNumber {
+    padding: 5px;
+}
+
+.selectedPageNumber {
+    font-weight: bold;
+    text-decoration: underline;
+}

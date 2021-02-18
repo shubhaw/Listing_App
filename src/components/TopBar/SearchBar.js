@@ -1,13 +1,22 @@
 import React from 'react';
 import './SearchBar.css';
 import { useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
-const SearchBar = (props) => {
+const SearchBar = () => {
+    const dispatch = useDispatch();
+    const history = useHistory();
+    
     const inputRef = useRef(null);
     const inputHandler = (e) => {
         e.preventDefault();
-        const searchItem = inputRef.current.value
-        props.onChange(searchItem)
+        const searchVal = inputRef.current.value;
+        dispatch({ type: 'UPDATE_SEARCH_VALUE', searchVal });
+        history.push({
+            pathname: "/",
+            search: `?q=${searchVal}&_page=1`
+        });
     }
     return (
         <form onSubmit={inputHandler} className="Search">
@@ -17,4 +26,4 @@ const SearchBar = (props) => {
     );
 }
 
-export default SearchBar
+export default SearchBar;

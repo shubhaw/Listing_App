@@ -1,3 +1,7 @@
+.taskbar {
+    display: flex;
+    justify-content: flex-end;
+}
 
 .taskbar_button {
     padding: 10px 20px;

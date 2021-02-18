@@ -17,11 +17,9 @@ const reducer = (state = initialstate, action) => {
             }
         case 'UPDATE_CURRENT_PAGE':
             {
-                const updatedCurrentPage = action.updatetype === 'increament' ? state.currentPage + 1 : state.currentPage - 1
-
                 return {
                     ...state,
-                    currentPage: updatedCurrentPage
+                    currentPage: action.pageNumber
                 }
             }
 
@@ -30,7 +28,8 @@ const reducer = (state = initialstate, action) => {
                 const updatedSearchValue = action.searchVal.length ? action.searchVal : ""
                 return {
                     ...state,
-                    searchValue: updatedSearchValue
+                    searchValue: updatedSearchValue,
+                    currentPage: 1
                 }
             }
 

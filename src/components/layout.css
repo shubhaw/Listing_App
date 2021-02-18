@@ -1,52 +1,11 @@
 .layout_container {
     display: flex;
     flex-direction: column;
+    background-color: gainsboro;
+    min-height: 100vh;
 }
 
-.top_bar {
-    width: 100vw;
-    top: 0;
-    left: 0;
-    position: fixed;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: darkblue;
-    color: white;
-    box-shadow: 5px 5px 5px #aaaaaa;
-}
-
-.footer {
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.footer button{
-    border-radius: 4px;
-    border: 1px solid gray;
-    margin: 0 5px;
-
-}
-
-.page_info{
-    left: 10px;
-}
-
-.taskbar {
-    margin-top: 89px;
-    padding: 5px 10px;
-    text-align: right;
-    background-color: white;
-}
-
-.pageNumber {
-    padding: 5px;
-}
-
-.selectedPageNumber {
-    font-weight: bold;
-    text-decoration: underline;
+.body_container {
+    margin-top: 80px;
+    padding: 20px;
 }
